@@ -31,11 +31,11 @@ For example, you can set the width of a view to 80% of the screen size
 
 ### Base on the shorter edge or longer edge of the device screen or another item ###
 
-For example, you can set the height of a square subview to 80% of the shorter edge of the superview so it always fits inside the superview regardless of device orientation.
+For example, you can set the height of a square subview to 80% of the shorter edge of the superview so it always fits inside the superview regardless of device orientation. Such as the orange view inside the pink view in the demo below.
 
 ## Demo Application ##
 
-<img src="./docs/portrait.png" width="25%" alt="Demo app portrait screenshot"> <img src="./docs/landscape.png" width="25%" alt="Demo app landscape screenshort">
+<img src="./docs/portrait.png" width="25%" alt="Demo app portrait screenshot"> <img src="./docs/landscape.png" width="50%" alt="Demo app landscape screenshort">
 
 <img src="./docs/cloudline.png" alt="---line---">
 
