@@ -1,0 +1,20 @@
+PODS:
+  - HKDeviceUtilities (1.0.0)
+  - HKUIViewLengthCalculationBasis (1.0.0)
+
+DEPENDENCIES:
+  - HKDeviceUtilities (~> 1.0.0)
+  - HKUIViewLengthCalculationBasis (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - HKDeviceUtilities
+    - HKUIViewLengthCalculationBasis
+
+SPEC CHECKSUMS:
+  HKDeviceUtilities: 21bd631eec1e39c34234e6468a6bec98253c2e62
+  HKUIViewLengthCalculationBasis: b4b1b13e203ae0aa303b109b22416601ca1fc687
+
+PODFILE CHECKSUM: ea1320cd1e1ac8071690aba48f34bb54721e89ed
+
+COCOAPODS: 1.8.4

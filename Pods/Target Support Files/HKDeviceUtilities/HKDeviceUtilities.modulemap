@@ -1,0 +1,6 @@
+framework module HKDeviceUtilities {
+  umbrella header "HKDeviceUtilities-umbrella.h"
+
+  export *
+  module * { export * }
+}

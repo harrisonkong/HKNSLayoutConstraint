@@ -1,0 +1,6 @@
+framework module Pods_HKNSLayoutConstraint {
+  umbrella header "Pods-HKNSLayoutConstraint-umbrella.h"
+
+  export *
+  module * { export * }
+}
