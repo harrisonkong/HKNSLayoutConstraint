@@ -117,12 +117,25 @@ This also means that: for X-axis and Y-axis type constraints (e.g. leading ancho
 
 ### Programmatically ###
 
-Create an instance of the class and then set the attributes (see Interface Builder above for explanations of the attributes)
+Create an instance of the class and then set the attributes (see Interface Builder above for explanations of the attributes).
+
+Then, if your app supports device rotation or if the layout will change on the fly, override viewWillLayoutSubviews() and call all the same methods of all `HKNSLayoutConstraint`'s. This is not necessary if your app only works in one orientation and the layout does not change.
 
 ```
 override func viewDidLoad() {
 
   super.viewDidLoad()
+  
+  // Setting the alt second item of a constraint that is created in Interface Builder
+  
+  ibContraint.altSeondItem = .uiItem(myButton)
+  
+  // set the top anchor of viewA to 10% of screen height:
+  
+  viewATopConstraint = HKNSLayoutConstraint(item: viewA as Any, attribute: .top, altSecondItem: .deviceScreen,   
+  altCalculationBasis: .height, altMultiplier: 0.1)
+  
+  viewATopConstraint.isActive = true
   
   // set width of viewA to 0.5 of the viewB:
         
@@ -138,6 +151,9 @@ override func viewDidLoad() {
 }
 
 override func viewWillLayoutSubviews() {
+
+  ibContraint.viewWillLayoutSubviews()
+  viewATopConstraint.viewWillLayoutSubviews()
   viewAWidthConstraint.viewWillLayoutSubviews()
   viewAHeightConstraint.viewWillLayoutSubviews() // not necessary but in case the equation is changed later
   
@@ -145,7 +161,17 @@ override func viewWillLayoutSubviews() {
 
 ```
 
-Note that the attributes `Alt Calc Basis` is of enumeration type that is declared inc`UIView+LengthCalculationBasis.swift` as follow:
+Note that the attributes `altSecondItem` is of enumeration type that is declared inc`UIView+LengthCalculationBasis.swift` as follow:
+
+```
+public enum HKNSLayoutConstraintSecondItem {
+    case notAnItem
+    case deviceScreen
+    case uiItem(UIView?)
+}
+```
+
+Note that the attributes `altCalculationBasis` is of enumeration type that is declared inc`UIView+LengthCalculationBasis.swift` as follow:
 
 ```
 @objc public enum LengthCalculationBasis: Int {
