@@ -131,7 +131,7 @@ This also means that: for X-axis and Y-axis type constraints (e.g. leading ancho
     
 3. Note that the actually layout will **NOT** be displayed at design time.
 
-4  **Important** : You must call the custom class method `viewWillLayoutSubviews()` in the same overridden method in the view controller if your app support device rotations in order to recalculate all the constraints.
+4  **Important** : You must call the custom class method `viewWillLayoutSubviews()` in the same overridden method in the view controller if your app supports device rotations or if the layout can change on the fly in order to recalculate all the constraints.
 
 ### Programmatically ###
 
