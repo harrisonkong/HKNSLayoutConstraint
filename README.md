@@ -19,7 +19,23 @@
 <img src="./docs/cloudline.png" alt="---line---">
 
 ## WHAT IS IT? ##
-`HKNSLayoutConstraint` enhances the functionality of `NSLayoutConstraint` by providing these additional features:
+`HKNSLayoutConstraint` enhances the functionality of `NSLayoutConstraint` by allowing these calculation methods for its constant:
+
+### X-axis and Y-axis to base on another dimension ###
+
+For example, you can set the leading constraint to 1/4 of the width of a view
+
+### Base on device screen size ###
+
+For example, you can set the width of a view to 80% of the screen size
+
+### Base on the shorter edge or longer edge of the device screen or another item ###
+
+For example, you can set the height of a square subview to 80% of the shorter edge of the superview so it always fits inside the superview regardless of device orientation.
+
+## Demo Application ##
+
+
 
 <img src="./docs/cloudline.png" alt="---line---">
 
