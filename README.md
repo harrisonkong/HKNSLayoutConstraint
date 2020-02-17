@@ -35,6 +35,8 @@ For example, you can set the height of a square subview to 80% of the shorter ed
 
 ## Demo Application ##
 
+You can find this demo application at https://github.com/harrisonkong/HKNSLayoutConstraintDemo
+
 <img src="./docs/portrait.png" width="25%" alt="Demo app portrait screenshot"> <img src="./docs/landscape.png" width="50%" alt="Demo app landscape screenshort">
 
 <img src="./docs/cloudline.png" alt="---line---">
