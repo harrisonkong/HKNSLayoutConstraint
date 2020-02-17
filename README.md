@@ -121,6 +121,19 @@ Create an instance of the class and then set the attributes (see Interface Build
 
 Then, if your app supports device rotation or if the layout will change on the fly, override viewWillLayoutSubviews() and call all the same methods of all `HKNSLayoutConstraint`'s. This is not necessary if your app only works in one orientation and the layout does not change.
 
+#### Convenience Initializers ####
+
+````
+public convenience init(item: Any, attribute: NSLayoutConstraint.Attribute, relatedBy: NSLayoutConstraint.Relation, toItem: Any?, attribute secondAttribute: NSLayoutConstraint.Attribute, multiplier: CGFloat, constant: CGFloat, altSecondItem: HKNSLayoutConstraintSecondItem, altCalculationBasis: UIView.LengthCalculationBasis, altMultiplier: CGFloat)
+    
+public convenience init(item: Any, attribute: NSLayoutConstraint.Attribute, altSecondItem: HKNSLayoutConstraintSecondItem, altCalculationBasis: UIView.LengthCalculationBasis, altMultiplier: CGFloat)
+
+public convenience init(item: Any, attribute: NSLayoutConstraint.Attribute, altSecondItem: HKNSLayoutConstraintSecondItem, altCalculationBasis: UIView.LengthCalculationBasis, constant: CGFloat)
+
+````
+
+#### Example ####
+
 ```
 override func viewDidLoad() {
 
